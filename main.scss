@@ -1,8 +1,7 @@
 // HAMBURGER MENU STYLING
 
-@media screen and (max-width:900px){
-
-nav{
+@media screen and (max-width: 900px) {
+  nav {
     position: fixed;
     top: 0;
     right: 0;
@@ -12,74 +11,72 @@ nav{
     z-index: 1;
     margin: 0;
     background-color: white;
-}
+  }
 
-header{
+  header {
     margin-top: 30px;
-}
+  }
 
-.cross-icon{
+  .cross-icon {
     z-index: 2;
     position: fixed;
     top: 0;
     right: 0;
     margin-right: 20px;
     margin-top: 30px;
-}
+  }
 
-.hamburger-icon{
+  .hamburger-icon {
     z-index: 2;
     margin-right: 20px;
-}
+  }
 
-.nav-items{
+  .nav-items {
     display: flex;
     flex-direction: column;
     z-index: 3;
     margin-top: 90px;
     padding: 30px;
-}
+  }
 
-.nav-1{
+  .nav-1 {
     height: 150px;
     display: flex;
     justify-content: space-between;
-}
+  }
 
-.nav-2{
+  .nav-2 {
     height: 100px;
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.nav-2 li:nth-child(2){
+  .nav-2 li:nth-child(2) {
     margin: 0;
     margin-top: 20px;
-}
+  }
 
-.dropbtn{
+  .dropbtn {
     padding: 0;
-}
+  }
 
-img{
+  img {
     width: 100%;
-}
+  }
 
-.hide{
+  .hide {
     display: none;
+  }
 }
 
-}
+@media (min-width: 900px) {
+  .hamburger-icon {
+    display: none;
+  }
 
-@media (min-width:900px){
-    .hamburger-icon{
-        display: none;
-
-    }
-
-    .cross-icon{
-        display: none;
-    }
+  .cross-icon {
+    display: none;
+  }
 }
