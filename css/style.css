@@ -1,0 +1,324 @@
+/* CSS RESET */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MY STYLES */
+
+/* ROOT */
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: 'Epilogue', sans-serif;;
+}
+
+p{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* NAV */
+
+header{
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-icon{
+    margin-left: auto;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 30px 40px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* BODY */
+
+img{
+    width: 100vw;
+}
+
+h1{
+    margin: 20px 0px 20px 0px;
+}
+
+h1 > div{
+    display: inline;
+}
+
+p{
+    text-align: center;
+    color: hsl(0, 0%, 41%);
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text button{
+    padding: 15px 25px 15px 25px;
+    margin: 20px 0px 20px 0px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 200px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.content button:hover{
+    background-color: white;
+    color: black;
+}
+
+.clients{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 30px;
+}
+
+/* HAMBURGER MENU */
+
+.hamburger-icon{
+    cursor: pointer;
+}
+
+.hamburger-icon:after{
+    width: 70%;
+    display: block;
+}
+
+.nav-item{
+    display:block;
+    margin: 20px;
+    align-items: center;
+}
+
+.nav-item a:hover{
+    color: black;
+}
+
+.nav-item i{
+    margin-right: 8px;
+}
+
+.nav-2 a:hover{
+    color: black;
+}
+
+.dropbtn{
+    border: none;
+    background-color: white;
+    color: hsl(0, 0%, 41%);
+    font-family: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+
+.dropbtn:hover{
+    color: black;
+}
+
+/* HAMBURGER NAV */
+
+
+.nav-2 li:nth-child(2){
+    border: 1px solid black ;
+    padding: 10px 20px 10px 20px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+
+
+li{
+    font-size: 18px;
+}
+
+li a{
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+}
+
+.nav-1{
+
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav-2{
+
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.nav-items{
+    display: none;
+}
+
+
+@media screen and (min-width: 900px){
+
+    /* NAV */
+
+
+
+    header nav{
+        flex-grow: 1;
+    }
+    
+    .nav-items{
+        display: flex;
+        flex-grow: 1;
+    }
+    
+    nav ul{
+        display: flex;
+        color: hsl(0, 0%, 41%);
+    }
+
+    .nav-1{
+        display: flex;
+        flex-direction: row;
+        margin-left: 50px;
+        align-items: center;
+    }
+
+    .nav-1 li{
+        display: flex;
+        align-items: center;
+    }
+
+    li{
+        margin-left: 30px;
+    }
+
+    .nav-2{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+    }
+
+
+    li a:hover{
+        color: black;
+    }
+
+    .cross-icon{
+        display: none;
+    }
+
+    .hamburger-icon{
+        display: none;
+    }
+
+    /* BODY */
+
+    .content{
+        display: grid;
+        margin: 0px 80px 0px 80px;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        max-height: 80vh;
+    }
+
+    .hero-img{
+        order: 1;
+        grid-column: 2 / span 3;
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .text{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    h1{
+        font-size: 4rem;
+        max-width: 450px;
+        margin-bottom: 50px;
+    }
+
+    p{
+        text-align: left;
+        max-width: 450px;
+        margin-bottom: 50px;
+    }
+
+    .clients{
+        display: flex;
+        max-width: 450px;
+        grid-column: 1 / span ;
+        justify-content: space-between;
+    }
+
+
+}
